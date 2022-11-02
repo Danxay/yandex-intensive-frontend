@@ -1,0 +1,39 @@
+.text {
+    font-family: var(--open-sans-regular);
+    font-size: 16px;
+    line-height: 22px;
+    font-style: normal;
+
+    color: #000000;
+}
+
+.text_bold {
+    font-family: var(--open-sans-bold);
+    font-size: 16px;
+    line-height: 22px;
+    font-style: normal;
+
+    color: #000000;
+}
+
+.text_long {
+    font-family: var(--open-sans-regular);
+    font-size: 14px;
+    line-height: 150%;
+    font-style: normal;
+
+    color: #000000;
+
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+}
+
+
+.subtext {
+    font-family: var(--open-sans-regular);
+    font-size: 16px;
+    line-height: 22px;
+    font-style: normal;
+
+    color: rgba(0, 0, 0, 0.5);
+}

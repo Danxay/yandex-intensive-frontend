@@ -1,0 +1,20 @@
+.wrapper {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.title {
+    margin-bottom: 14px;
+
+    font-size: 20px !important;
+    line-height: 27px !important;
+}
+
+.price {
+    margin-top: 14px;
+
+    font-size: 24px !important;
+    line-height: 33px !important;
+}

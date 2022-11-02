@@ -1,0 +1,14 @@
+.button {
+    background: none;
+
+    cursor: pointer;
+    overflow-wrap: anywhere;
+}
+
+.button:hover {
+    font-family: var(--open-sans-bold);
+}
+
+.button.active {
+    font-family: var(--open-sans-bold);
+}
