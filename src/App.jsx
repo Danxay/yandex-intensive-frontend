@@ -10,7 +10,7 @@ export function App() {
     <>
       <Header />
       <Catalog categories={categories} />
-      {/*<BookDetails book={categories[0].books[0]} />*/}
+      {/* <BookDetails book={categories[0].books[0]} /> */}
     </>
   );
 }
