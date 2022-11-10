@@ -294,7 +294,7 @@ export const categories = [
   },
   {
     id: 5,
-    name: 'Религия',
+    name: 'Периодические издания',
     books: [
       {
         id: 14,

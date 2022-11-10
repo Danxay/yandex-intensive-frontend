@@ -17,3 +17,12 @@
 
     list-style: none;
 }
+
+span.skeleton {
+    display: flex;
+    gap: 24px;
+}
+
+.skeleton {
+    height: 22px;
+}

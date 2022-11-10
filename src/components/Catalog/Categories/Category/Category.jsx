@@ -2,10 +2,10 @@ import classnames from 'classnames';
 
 import styles from './Category.module.css'
 
-export function Category({ name, setActiveCategory, active }) {
+export function Category({ name }) {
   return (
     <li>
-      <button onClick={setActiveCategory} className={classnames('text', styles.button, { [styles.active]: active })}>{name}</button>
+      <button onClick={() => console.log(1)} className={classnames('text', styles.button, { [styles.active]: 13 })}>{name}</button>
     </li>
   )
 }
