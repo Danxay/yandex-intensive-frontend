@@ -1,11 +1,12 @@
-@import "fonts.css";
+@import "vendor/normalize.css";
+@import "vendor/fonts/fonts.css";
 
 :root {
     --open-sans-regular: 'Open Sans Regular', Arial, Helvetica, Nimbus Sans L, sans-serif;
     --open-sans-bold: 'Open Sans Bold', Arial, Helvetica, Nimbus Sans L, sans-serif;
 }
 
-* {
+h1, p, ul, button, pre {
     margin: 0;
     padding: 0;
     border: none;

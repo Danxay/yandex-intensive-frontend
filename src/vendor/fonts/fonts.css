@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Open Sans Regular';
+    font-display: swap;
+    src: url("OpenSans-Regular.ttf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Open Sans Bold';
+    font-display: swap;
+    src: url("OpenSans-Bold.ttf") format("truetype");
+    font-weight: 700;
+}

@@ -1,11 +1,12 @@
+import { Link } from 'react-router-dom';
 import classnames from 'classnames';
 
 import styles from './Category.module.css'
 
-export function Category({ name }) {
+export function Category({ id, name, isActive }) {
   return (
     <li>
-      <button onClick={() => console.log(1)} className={classnames('text', styles.button, { [styles.active]: 13 })}>{name}</button>
+      <Link to={`/catalog?category=${id}`} className={classnames('text', styles.button, { [styles.active]: isActive })}>{name}</Link>
     </li>
   )
 }

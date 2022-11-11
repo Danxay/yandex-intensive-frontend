@@ -13,7 +13,7 @@ export function BookCard({ book }) {
         rating={book.rating}
         price={book.price}
       />
-      <BookCardCount />
+      <BookCardCount bookId={book.id} />
     </article>
   )
 }

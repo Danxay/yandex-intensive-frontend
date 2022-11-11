@@ -13,7 +13,7 @@ const port = 3001
 app.use(cors())
 
 app.get('/api/categories', (req, res) => {
-  setTimeout(() => { res.json(categories) }, 2000)
+  setTimeout(() => { res.json(categories) }, 250)
 })
 
 app.get('/api/books', (req, res) => {
@@ -21,11 +21,11 @@ app.get('/api/books', (req, res) => {
     const category = categories.find((c) => c.id === req.query.categoryId)
     const filteredBooks = books.filter((b) => category.books.includes(b.id))
 
-    res.json(filteredBooks)
+    setTimeout(() => { res.json(filteredBooks) }, 500)
     return;
   }
 
-  setTimeout(() => { res.json(books) }, 2000)
+  res.json(books)
 })
 
 app.get('/api/books/:id', (req, res) => {
@@ -39,10 +39,12 @@ app.get('/api/books/:id', (req, res) => {
       return review;
     })
 
-  res.json({
-    ...book,
-    reviews: filteredReviews,
-  })
+  setTimeout(() => {
+    res.json({
+      ...book,
+      reviews: filteredReviews,
+    })
+  }, 375)
 })
 
 app.listen(port, () => {

@@ -1,22 +1,34 @@
-import { useSearchParams } from 'react-router-dom';
-import { useEffect } from 'react';
-// import { BookCard } from './BookCard/BookCard';
+import { memo, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+
+import Skeleton from 'react-loading-skeleton';
+import { BookCard } from './BookCard/BookCard';
 
 import styles from './BooksList.module.css';
 
-export function BooksList() {
-  const [searchParams] = useSearchParams();
-  const activeCategoryId = searchParams.get('category')
+import { selectBooks, selectStatus } from '../../../store/books/selectors';
+import { loadBooksByCategory } from '../../../store/books/loadBooksByCategory';
+import { Statuses } from '../../../constants/statuses';
+
+export const BooksList = memo(({ activeCategoryId }) => {
+  const dispatch = useDispatch();
+  const books = useSelector(selectBooks);
 
   useEffect(() => {
-    console.log(13)
-  }, [activeCategoryId])
+    dispatch(loadBooksByCategory(activeCategoryId));
+  }, [activeCategoryId]);
 
+  const status = useSelector(selectStatus);
   return (
     <div className={styles.wrapper}>
-      {/* {books.map((b) => ( */}
-      {/*   <BookCard book={b} key={b.id} /> */}
-      {/* ))} */}
+      {status === Statuses.success && books.length ? books.map((b) => (
+        <BookCard book={b} key={b.id} />
+      )) : (
+        <Skeleton
+          className={styles.skeleton}
+          count={3}
+        />
+      )}
     </div>
   )
-}
+})

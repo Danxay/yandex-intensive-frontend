@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './Header.module.css'
 
 export function Header() {
@@ -5,8 +6,8 @@ export function Header() {
     <header className={styles.header}>
       <div className="container">
         <div className={styles.wrapper}>
-          <span className={styles.title}>Магазин</span>
-          <a className={styles.cartBtn} href="/">
+          <Link to="/"><span className={styles.title}>Магазин</span></Link>
+          <Link className={styles.cartBtn} to="/cart">
             <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M8 22.25C8.82843 22.25 9.5 21.5784 9.5 20.75C9.5 19.9216 8.82843 19.25 8 19.25C7.17157 19.25 6.5 19.9216 6.5 20.75C6.5 21.5784 7.17157 22.25 8 22.25Z"
@@ -23,7 +24,7 @@ export function Header() {
                 fill="white"
               />
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
     </header>

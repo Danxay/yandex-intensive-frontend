@@ -1,11 +1,9 @@
 import { Link } from 'react-router-dom';
-
+import styles from './OrderBook.module.css';
 import { BookCardInfo } from '../../../common/BookCard/BookCardInfo/BookCardInfo';
 import { BookCardCount } from '../../../common/BookCard/BookCardCount/BookCardCount';
 
-import styles from './BookCard.module.css'
-
-export function BookCard({ book }) {
+export function OrderBook({ book }) {
   return (
     <article className={styles.item}>
       <Link to={`/catalog/${book.id}`}>

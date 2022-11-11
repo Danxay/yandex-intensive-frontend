@@ -3,7 +3,7 @@ import { Statuses } from '../../constants/statuses';
 
 const initialState = {
   entities: {},
-  activeCategoryId: null,
+  ids: [],
   status: Statuses.idle,
 };
 
@@ -14,15 +14,15 @@ export const categoriesSlice = createSlice({
     setActiveCategoryId: (state, action) => {
       state.activeCategoryId = action.payload.activeCategoryId
     },
+    updateEntities: (state, action) => {
+      state.entities = { ...action.payload.entities };
+      state.ids = action.payload.ids;
+    },
     startLoading: (state) => {
       state.status = Statuses.inProgress;
     },
-    successLoading: (state, action) => {
+    successLoading: (state) => {
       state.status = Statuses.success;
-      state.entities = { ...state.entities, ...action.payload.entities };
-
-      const [firstId] = Object.keys(action.payload.entities)
-      state.activeCategoryId = firstId;
     },
     failLoading: (state) => {
       state.status = Statuses.failed;

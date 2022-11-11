@@ -7,9 +7,10 @@
 
 span.skeleton {
     display: flex;
-    gap: 16px;
+    gap: 20px 40px;
 }
 
 .skeleton {
+    width: 100%;
     height: 216px;
 }

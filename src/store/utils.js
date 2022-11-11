@@ -3,4 +3,5 @@ export const prepareData = (items) => ({
     acc[cinema.id] = cinema;
     return acc;
   }, {}),
+  ids: items.map(({ id }) => id),
 });
