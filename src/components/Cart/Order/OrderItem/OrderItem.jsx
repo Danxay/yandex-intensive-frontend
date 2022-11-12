@@ -1,3 +1,4 @@
+import classnames from 'classnames';
 import styles from './OrderItem.module.css';
 
 export function OrderItem({ title, price }) {
@@ -6,7 +7,7 @@ export function OrderItem({ title, price }) {
       <p className="text">
         {title}
       </p>
-      <span className="text_bold">
+      <span className={classnames('text_bold', styles.price)}>
         {price}
         {' '}
         ₽

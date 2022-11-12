@@ -3,3 +3,7 @@
     justify-content: space-between;
     gap: 34px;
 }
+
+.price {
+    flex-shrink: 0;
+}
