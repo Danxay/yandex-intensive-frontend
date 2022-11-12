@@ -1,5 +1,3 @@
-import Skeleton from 'react-loading-skeleton';
-
 import { useSelector } from 'react-redux';
 import styles from './Order.module.css';
 import { OrderItem } from './OrderItem/OrderItem';
@@ -13,11 +11,8 @@ export function Order({ books }) {
     <div className={styles.wrapper}>
       <h1 className="text_bold">Ваш заказ: </h1>
       <div className={styles.orderItems}>
-        {1 ? books.map((b) => <OrderItem title={b.title} price={b.price} key={b.id} />) : (
-          <Skeleton
-            className={styles.skeleton}
-            count={3}
-          />
+        {booksWithCount.map(
+          (b) => <OrderItem title={b.title} price={b.price} count={b.count} key={b.id} />,
         )}
       </div>
       <div className={styles.bottom}>
