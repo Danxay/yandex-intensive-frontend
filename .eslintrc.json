@@ -18,6 +18,7 @@
     "react"
   ],
   "rules": {
+    "no-param-reassign": ["error", { "props": false }],
     "react/react-in-jsx-scope": "off",
     "react/jsx-filename-extension": [
       1,
