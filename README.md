@@ -4,7 +4,7 @@
 
 ### `yarn`
 
-### `node index.js`
+### `yarn run start`
 
 # Getting Started with Create React App
 
