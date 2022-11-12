@@ -1,9 +1,14 @@
 import Skeleton from 'react-loading-skeleton';
 
+import { useSelector } from 'react-redux';
 import styles from './Order.module.css';
 import { OrderItem } from './OrderItem/OrderItem';
+import { selectCountByIds } from '../../../store/cart/selectors';
 
 export function Order({ books }) {
+  const booksIds = books.map((b) => b.id);
+  const count = useSelector(selectCountByIds(booksIds))
+  const booksWithCount = books.map((b, i) => ({ ...b, count: count[i] }))
   return (
     <div className={styles.wrapper}>
       <h1 className="text_bold">Ваш заказ: </h1>
@@ -19,7 +24,7 @@ export function Order({ books }) {
         <span className={styles.total}>
           Итого:
           {' '}
-          {books.reduce((acc, value) => acc + +value.price, 0)}
+          {booksWithCount.reduce((acc, b) => acc + +b.price * +b.count, 0)}
           {' '}
           ₽
         </span>

@@ -26,11 +26,9 @@ export function Catalog() {
   return (
     <div className="container">
       <div className={styles.wrapper}>
+        <Categories categories={categories} activeCategoryId={activeCategoryId} />
         {activeCategoryId && (
-          <>
-            <Categories categories={categories} activeCategoryId={activeCategoryId} />
-            <BooksList activeCategoryId={activeCategoryId} />
-          </>
+          <BooksList activeCategoryId={activeCategoryId} />
         )}
       </div>
     </div>
