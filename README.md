@@ -1,9 +1,14 @@
-## Домашние задания с Яндекс Интенсива по фронтенду
+• Для основной части страницы можно использовать тег main, для заглавной части тега main использовать header, для нижней
+части страницы footer, для формы поиска использовать теги form, input и button. Для заголовка я использовал тег h1, для
+текста тег p, для ссылок тег a, список сервисов я обернул в тег nav.
 
-1. [Верстка страницы поиска Яндекса](https://github.com/Danxay/yandex-intensive-frontend/tree/homework-1)
-2. [Сборка Webpack для проекта](https://github.com/Danxay/shri_simple_template)
-4. [React-приложение магазина книг](https://github.com/Danxay/yandex-intensive-frontend/tree/homework-4)
-5. [Автоматическое тестирование проекта](https://github.com/Danxay/testing-homework)
-6. [Продвинутый JS (Написание свой реализации Set)](https://github.com/Danxay/yandex-intensive-frontend/tree/homework-6)
-7. [Асинхронность](https://github.com/Danxay/yandex-intensive-frontend/tree/homework-7)
-8. [Оптимизация страницы](https://github.com/Danxay/yandex-intensive-frontend/tree/homework-8)
+• В input можно вводить текст, при наведедении на кнопку меняется ее цвет и изменяется курсор, при наведедени на ссылку
+изменяется цвет ее текста.
+
+• По горизонтали я сделал container и задал ему margin: 0 auto;, для выравнивания по вертикали я задал тегу main
+padding-top: 50vh; и transform: translateY(-20%);
+
+• Чтобы прибить футер к низу экрана я задал тегу body display: flex;, flex-direction: column;, и justify-content:
+space-between;
+
+• Если текста будут другими, то они могут быть нормально перенесены на новую строку
