@@ -1,0 +1,29 @@
+{
+  "name": "homework-1",
+  "version": "1.0.0",
+  "scripts": {
+    "lint:es": "eslint --ext .ts ts",
+    "lint:es:fix": "npm run lint:es --fix",
+    "lint:style": "stylelint scss",
+    "lint:style:fix": "npm run style:scss --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Danxay/yandex-intensive-frontend.git"
+  },
+  "author": "Danxay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Danxay/yandex-intensive-frontend/issues"
+  },
+  "homepage": "https://github.com/Danxay/yandex-intensive-frontend#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.47.1",
+    "@typescript-eslint/parser": "^5.47.1",
+    "eslint": "^8.30.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "stylelint": "^14.16.0",
+    "stylelint-config-standard": "^29.0.0"
+  }
+}
